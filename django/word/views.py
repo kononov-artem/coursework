@@ -195,16 +195,22 @@ def get_your_dct(request):
 
 
 def word_traine_get_word(request):
-    user = User.objects.get(pk=1)
-    dicts = Dictionaries.objects.filter(user__pk=user.pk)
-    words = []
-    for dct in dicts:
-        for pair in dct.translate.all():
-            words.append(pair.word)
-
-    word = words[random.randint(0, len(words) - 1)]
+    # user = User.objects.get(pk=1)
+    # dicts = Dictionaries.objects.filter(user__pk=user.pk)
+    # words = []
+    # for dct in dicts:
+    #     for pair in dct.translate.all():
+    #         words.append(pair.word)
+    #
+    # word = words[random.randint(0, len(words) - 1)]
+    words = Translate.objects.all()[100:130]
+    data = [{
+        'original': word.word.word,
+        'translate': word.translate.word,
+    } for word in words]
+    # print(data)
     response = JsonResponse({
-        'word': word.word,
+        'words': data,
         # 'current_user': str(user)
     })
     return response
