@@ -51,9 +51,13 @@ class Loading extends React.Component {
         word: 'Привет'
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
+
     do = () => {
         var i = 0
-        setInterval(() => {
+        this.interval = setInterval(() => {
             if (i >= this.words.length) {
                 i = 0
             }

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81c960f5-25ef-4502-9d6e-8cb0e51f9906" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../react/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../react/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/components/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/components/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/components/Loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/components/Loading.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="168" column="17" lean-forward="true" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+            <state relative-caret-position="424">
+              <caret line="166" column="14" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -433,8 +431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/word/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="168" column="17" lean-forward="true" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        <state relative-caret-position="424">
+          <caret line="166" column="14" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
         </state>
       </provider>
     </entry>
