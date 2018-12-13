@@ -16,31 +16,59 @@ class App extends Component {
             <Container fluid={true}>
                 <Row>
                     <Col md="6" md-offset="3">
-                        <div style={{
-                            backgroundColor: 'blue',
-                            height: '450px',
-                            borderRadius: '10px',
-                            marginTop: 40,
 
+                        <div style={{
+                            // backgroundColor: '#ffffff',
+                            height: '400px',
+                            marginTop: 40,
+                            borderRadius: '5px',
+                            border: '1px solid #cccccc'
                         }}>
-                            <Col md="12"
-                                style={{
-                                    backgroundColor: '#9b3103',
-                                    height: '50px',
-                                }}
-                            >
-                                <Button variant="outlined" component={home} fullWidth={true} color="default">Home</Button>
-                            </Col>
+                            <Row>
+                                <Col md-offset="1" md="7" style={{
+                                    marginTop: 15
+                                }}>
+                                    <p style={{
+                                        // marginLeft: 25,
+                                        fontSize: '30px',
+                                        fontStyle: 'Muli',
+                                        fontFamily: 'Oswald',
+                                        fontWeight: 500
+                                    }}
+                                    ><b>Words</b></p>
+                                </Col>
+                                <Col md="3" style={{
+                                    marginTop: 15
+                                }}>
+                                    <Button variant="outlined" component={home} >Home</Button>
+                                </Col>
+                            </Row>
+                            <hr style={{
+                                margin: 0
+                            }}/>
+
                             <Route exact path="/" component={Home}/>
                             <Route path="/test" component={Test}/>
+
+                            {/*<hr style={{*/}
+                                {/*margin: 0*/}
+                            {/*}}/>*/}
+                            {/*<Row>*/}
+                                {/*<Col md-offset="1" md="7" style={{*/}
+                                    {/*// marginTop: 15*/}
+                                {/*}}>*/}
+                                    {/*<p style={{*/}
+                                        {/*// marginLeft: 25,*/}
+                                        {/*fontSize: 12,*/}
+                                        {/*// fontStyle: 'Muli',*/}
+                                        {/*// fontFamily: 'Oswald',*/}
+                                        {/*// fontWeight: 500*/}
+                                    {/*}}*/}
+                                    {/*>Words</p>*/}
+                                {/*</Col>*/}
+                            {/*</Row>*/}
                         </div>
-                        <Col md="12"
-                            style={{
-                                backgroundColor: '#9b1b38',
-                                height: '50px'
-                            }}
-                        >
-                        </Col>
+
                     </Col>
                 </Row>
             </Container>

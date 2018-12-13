@@ -140,9 +140,29 @@ class Test extends React.Component {
                     <Row>
                         <Col md="12">
                         <Row>
-                            <Col md="12" style={{textAlign: 'center'}}>
-                                <h3>Give the translation of the word:</h3>
-                                <h1>{this.state.word}</h1>
+                            <Col md="12" style={{
+                                textAlign: 'center',
+                                fontFamily: 'Oswald',
+                                fontSize: 16,
+                                marginTop: 25
+                            }}>
+                                <div>
+                                    <p>Give the translation of the word</p>
+                                </div>
+
+                                <div style={{
+                                    // border: '1px solid #cccccc',
+
+                                }}>
+                                    <p style={{
+                                        fontSize: 24,
+                                        marginTop: 20,
+                                        marginBottom: 20,
+                                        fontFamily: 'Noto Serif TC'
+                                    }}>
+                                        <b>{this.state.word.toLowerCase()}</b>
+                                    </p>
+                                </div>
                             </Col>
                         </Row>
                         <Row style={{marginTop: 10}}>
@@ -150,12 +170,23 @@ class Test extends React.Component {
                                 <Row>
 
                                     {
-                                        this.state.wrongWords.map((item, index) => (
-                                            <Col key={index} md="3">
-                                                <Button style={{width: 130}} color={this.state.colors[index]} variant={this.state.variants[index]} disabled={this.state.disable[index]} key={index}
-                                                    onClick={() => this.check(item, index)}
+                                        this.state.wrongWords.map((word, index) => (
+                                            <Col key={index} md="6">
+                                                <Button
+                                                    style={{
+                                                        width: 117,
+                                                        marginBottom: 20,
+                                                    }}
+                                                    // color={this.state.colors[index]}
+                                                    // variant={this.state.variants[index]}
+                                                    variant="outlined"
+                                                    disabled={this.state.disable[index]}
+                                                    key={index}
+                                                    onClick={() => this.check(word, index)}
                                                 >
-                                                    {item}
+                                                    <span style={{
+                                                        fontSize: 12
+                                                    }}>{word}</span>
                                                 </Button>
                                             </Col>
                                         ))
@@ -165,17 +196,34 @@ class Test extends React.Component {
                             </Col>
                         </Row>
                         <Row style={{height: 50}}>
-                            <Col md-offset="10" md="2">
+                            <Col md-offset="2" md="8">
                                 {
                                     this.state.isAnswer ? (
-                                        <Button variant="contained" onClick={() => this.getWord()}>Next</Button>
+                                        <Button
+                                            variant="outlined"
+                                            onClick={() => this.getWord()}
+                                            style={{
+                                                width: '100%'
+                                            }}
+                                        >
+                                            Next
+                                        </Button>
                                     ) : null
                                 }
                             </Col>
                         </Row>
                         <Row>
-                            <Col md="2" md-offset="10">
-                                <b><span style={{color: 'green'}}>{this.state.countOfСorrect}</span> / <span style={{color: 'red'}}>{this.state.countOfAttempt}</span></b>
+                            <Col md-offset="5" md="2" style={{
+                                // textAlign: 'center'
+                                marginLeft: 192,
+                            }}>
+                                <div style={{
+                                    // borderRadius: '5px',
+                                    // border: '1px solid #cccccc',
+
+                                }}>
+                                    <b><span style={{color: ''}}>{this.state.countOfСorrect}</span> / <span style={{color: ''}}>{this.state.countOfAttempt}</span></b>
+                                </div>
                             </Col>
                         </Row>
                         </Col>
