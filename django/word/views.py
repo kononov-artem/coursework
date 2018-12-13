@@ -157,11 +157,15 @@ def get_your_dct(request):
 
 
 def word_traine_get_word(request):
-    words = Translate.objects.all()[100:130]
-    data = [{
-        'original': word.word.word,
-        'translate': word.translate.word,
-    } for word in words]
+    words = Translate.objects.all()
+    data = []
+    for word in words:
+        if word.word and word.translate:
+            data.append({
+                'original': word.word.word,
+                'translate': word.translate.word,
+            })
+    # print(data)
     response = JsonResponse({
         'words': data
     })

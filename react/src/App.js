@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import {BrowserRouter, Route, Link} from "react-router-dom"
 import Home from "./components/Home";
 import Test from "./components/Test";
+import Loading from "./components/Loading";
 const home = props => <Link to="/" {...props} />
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
 
                         <div style={{
                             // backgroundColor: '#ffffff',
+                            width: 378,
                             height: '400px',
                             marginTop: 40,
                             borderRadius: '5px',
@@ -40,13 +42,19 @@ class App extends Component {
                                 <Col md="3" style={{
                                     marginTop: 15
                                 }}>
-                                    <Button variant="outlined" component={home} >Home</Button>
+                                    <Button variant="outlined" component={home}
+                                        style={{
+                                            // // border: 0
+                                            // '&:hover': {
+                                            //     backgroundColor = 'black'
+                                            // }
+                                        }}
+                                    >Home</Button>
                                 </Col>
                             </Row>
                             <hr style={{
                                 margin: 0
                             }}/>
-
                             <Route exact path="/" component={Home}/>
                             <Route path="/test" component={Test}/>
 

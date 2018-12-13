@@ -2,12 +2,13 @@ import React from 'react';
 import Button from "@material-ui/core/Button/Button";
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
+import Loading from "./Loading";
 
 
 class Test extends React.Component {
     constructor(props) {
         super(props)
-        this.initColors = ['primary', 'primary', 'primary', 'primary',]
+        this.initColors = [null, null, null, null,]
         this.disable = [false, false, false, false]
         this.initVarians = ['outlined', 'outlined', 'outlined', 'outlined']
         this.count = 0
@@ -103,21 +104,24 @@ class Test extends React.Component {
         console.log(this.state.isChecked)
         if (!this.state.isChecked) {
             let colors = [...this.state.colors]
+            let variants = [...this.state.variants]
             var disable = [true, true, true, true]
             this.setState({countOfAttempt: this.state.countOfAttempt + 1})
             if (word === this.state.translate) {
                 colors[index] = 'primary'
+                variants[index] = 'contained'
                 this.setState({countOfСorrect: this.state.countOfСorrect + 1})
             } else {
                 colors[index] = 'secondary'
+                variants[index] = 'contained'
             }
-            let variants = [...this.state.variants]
             variants[index] = 'outlined'
             disable[index] = false
             this.state.wrongWords.map((item, index) => {
                 if (item === this.state.translate) {
                     disable[index] = false
-                    variants[index] = 'outlined'
+                    colors[index] = 'primary'
+                    variants[index] = 'contained'
                 }
             })
 
@@ -135,7 +139,16 @@ class Test extends React.Component {
         return (
             <Row>
                 {this.state.isLoading ?
-                    (<Col md="12" style={{textAlign: 'center'}}><h1>Please wait loading...</h1> </Col>) :
+                    (
+                        <Col md="12" style={{textAlign: 'center'}}>
+                            <h3>Please wait loading...</h3>
+                            <h3>We are looking for words for you</h3>
+                            <Row>
+                                <Col md="12" style={{textAlign: 'center'}}>
+                                    <Loading interval='100'/>
+                                </Col>
+                            </Row>
+                        </Col>) :
                     (
                     <Row>
                         <Col md="12">
@@ -177,9 +190,8 @@ class Test extends React.Component {
                                                         width: 117,
                                                         marginBottom: 20,
                                                     }}
-                                                    // color={this.state.colors[index]}
-                                                    // variant={this.state.variants[index]}
-                                                    variant="outlined"
+                                                    color={this.state.colors[index]}
+                                                    variant={this.state.variants[index]}
                                                     disabled={this.state.disable[index]}
                                                     key={index}
                                                     onClick={() => this.check(word, index)}
