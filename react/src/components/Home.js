@@ -14,11 +14,11 @@ class Home extends React.Component {
                 <Col md="12">
                     <Row>
                         <Row>
-                            <Col md="12" style={{textAlign: 'center'}}>
+                            <Col xs="12" md="12" style={{textAlign: 'center'}}>
                                 <Loading interval="400"/>
                             </Col>
                         </Row>
-                        <Col md-offset="1" md="10">
+                        <Col md-offset="1" md="10" xs-offset="1" xs="10">
                             <p style={{
                                 // padding: 10,
                                 marginTop: 20,
@@ -33,7 +33,7 @@ class Home extends React.Component {
                     <Row style={{
                         marginTop: '20px'
                     }}>
-                        <Col md-offset="1" md="6">
+                        <Col md-offset="1" md="6" xs-offset="1" xs="6">
                             <Button variant="outlined" component={test}
                                 style={{
                                     marginBottom: '10px',

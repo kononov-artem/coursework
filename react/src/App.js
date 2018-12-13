@@ -16,18 +16,18 @@ class App extends Component {
         <BrowserRouter>
             <Container fluid={true}>
                 <Row>
-                    <Col md="6" md-offset="3">
+                    <Col xs="6" md="6" md-offset="4" xs-offset="0">
 
                         <div style={{
-                            // backgroundColor: '#ffffff',
                             width: 378,
                             height: '400px',
                             marginTop: 40,
                             borderRadius: '5px',
-                            border: '1px solid #cccccc'
+                            border: '1px solid #cccccc',
+                            // marginLeft: 80
                         }}>
                             <Row>
-                                <Col md-offset="1" md="7" style={{
+                                <Col md-offset="1" md="7" xs-offset="1" xs="7" style={{
                                     marginTop: 15
                                 }}>
                                     <p style={{
@@ -57,24 +57,6 @@ class App extends Component {
                             }}/>
                             <Route exact path="/" component={Home}/>
                             <Route path="/test" component={Test}/>
-
-                            {/*<hr style={{*/}
-                                {/*margin: 0*/}
-                            {/*}}/>*/}
-                            {/*<Row>*/}
-                                {/*<Col md-offset="1" md="7" style={{*/}
-                                    {/*// marginTop: 15*/}
-                                {/*}}>*/}
-                                    {/*<p style={{*/}
-                                        {/*// marginLeft: 25,*/}
-                                        {/*fontSize: 12,*/}
-                                        {/*// fontStyle: 'Muli',*/}
-                                        {/*// fontFamily: 'Oswald',*/}
-                                        {/*// fontWeight: 500*/}
-                                    {/*}}*/}
-                                    {/*>Words</p>*/}
-                                {/*</Col>*/}
-                            {/*</Row>*/}
                         </div>
 
                     </Col>

@@ -140,20 +140,20 @@ class Test extends React.Component {
             <Row>
                 {this.state.isLoading ?
                     (
-                        <Col md="12" style={{textAlign: 'center'}}>
+                        <Col md="12" xs="12" style={{textAlign: 'center'}}>
                             <h3>Please wait loading...</h3>
                             <h3>We are looking for words for you</h3>
                             <Row>
-                                <Col md="12" style={{textAlign: 'center'}}>
+                                <Col md="12" xs="12" style={{textAlign: 'center'}}>
                                     <Loading interval='100'/>
                                 </Col>
                             </Row>
                         </Col>) :
                     (
                     <Row>
-                        <Col md="12">
+                        <Col xs="12" md="12">
                         <Row>
-                            <Col md="12" style={{
+                            <Col xs="12" md="12" style={{
                                 textAlign: 'center',
                                 fontFamily: 'Oswald',
                                 fontSize: 16,
@@ -179,12 +179,12 @@ class Test extends React.Component {
                             </Col>
                         </Row>
                         <Row style={{marginTop: 10}}>
-                            <Col md-offset="2" md="8">
+                            <Col md-offset="2" md="8" xs-offset="2" xs="8">
                                 <Row>
 
                                     {
                                         this.state.wrongWords.map((word, index) => (
-                                            <Col key={index} md="6">
+                                            <Col key={index} md="6" xs="6">
                                                 <Button
                                                     style={{
                                                         width: 117,
@@ -208,7 +208,7 @@ class Test extends React.Component {
                             </Col>
                         </Row>
                         <Row style={{height: 50}}>
-                            <Col md-offset="2" md="8">
+                            <Col md-offset="2" md="8" xs-offset="2" xs="8">
                                 {
                                     this.state.isAnswer ? (
                                         <Button
@@ -225,7 +225,7 @@ class Test extends React.Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col md-offset="5" md="2" style={{
+                            <Col md-offset="5" md="2" xs-offset="5" xs="2" style={{
                                 // textAlign: 'center'
                                 marginLeft: 192,
                             }}>
