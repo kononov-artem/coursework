@@ -53,13 +53,17 @@ class Loading extends React.Component {
 
     do = () => {
         var i = 0
-        setInterval(() => {
+        this.interval = setInterval(() => {
             if (i >= this.words.length) {
                 i = 0
             }
             this.setState({word: this.words[i]});
             i++
         }, this.props.interval)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval)
     }
 
     render() {
