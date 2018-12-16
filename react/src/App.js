@@ -16,7 +16,7 @@ class App extends Component {
         <BrowserRouter>
             <Container fluid={true}>
                 <Row>
-                    <Col xs="6" md="6" md-offset="4" xs-offset="0">
+                    <Col xs="6" md="6" md-offset="0" xs-offset="0">
 
                         <div style={{
                             width: 378,
